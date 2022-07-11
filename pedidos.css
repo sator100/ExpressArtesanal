@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:sans-serif;
+}
+.logo{
+    width: 136px;
+    height: 85px;
+}
+
+.contenedor{
+    width: 100%;
+    margin: auto;
+}
+
+/*----Estilos para el encabezado(header)*/
+
+.header{
+    height: 95px;
+    background:#ff7439;
+}
+
+.header.contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo, .icon-menu{
+    margin: 5px;
+    color: white;
+}
+
+.icon-menu{
+    position:absolute;
+    right: 100px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background:#ff8a57;
+    text-align:center;
+    line-height: 45px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.nav{
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+}
+
+.menu__link{
+    display: block;
+    padding: 15px;
+    background: rgb(51,51,51,0.9);
+    color: white;
+    height: 60px;
+    border-bottom: 1px solid #fff;
+}
+
+.menu__link:hover{
+    background-color: #ff7439;
+    color: white;
+}
+
+.muestrate{
+    left:0;
+}
+
+/*----Estilos para el encabezado(header)*/
+
+.page__content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 3px solid #281006;
+    background: #ff8a57;
+}
+
+.button__add{
+    background-color:#ff7439;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:8px;
+    transition-duration: 0.5s;
+}
+
+.button___add:hover {
+    background-color:white;
+    color:#ff7439;
+}
+
+.page__content h3{
+    color: white;
+}
+
+.product__container img{
+    width: 350px;
+    border-radius: 10%;
+    border: 10px solid #d57349;
+}
+
+.product__container{
+    margin: 15px;
+    padding: 2px 16px;
+}
+
+.product__container:hover{
+    box-shadow: 0 8px 16px 0 rgb(0,0,0,0.2);
+}
+
+@media(min-width:1024px){
+    .nav{
+        position: static;
+        width: auto;
+    }
+
+    .menu{
+        position: absolute;
+        display: flex;
+        right: 100px;
+        margin-top: -65px;
+        
+    }
+
+    .menu__link{
+        border: none;
+    }
+
+    .menu__link{
+        color: white;
+        background:#ff8a57;
+    }
+
+    .icon-menu{
+        display: none;
+    }
+}
